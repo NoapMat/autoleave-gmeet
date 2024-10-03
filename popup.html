@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="title">
+        G-Leave <small>by Mat</small>
+        <button id="toggle-dark-mode" class="toggle-dark-mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 17 17">
+                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="meet visible">
+        <div class="noOfPart">
+            Participants: <span id="noOfParticipant">0</span>
+        </div>
+        <div class="subtitle">
+            Enter the number of participants below which you want to exit the meeting.
+        </div>
+        <div class="data">
+            <input type="number" id="requiredParticipantToExit" min="1" value="2" autofocus>
+            <input type="button" value="Confirm" id="confirm">
+        </div>
+    </div>
+
+    <div class="running hide">
+        <div class="subtitle">
+            It will automatically exited soon, so sit back and relax ur ass. Go get some grass.
+        </div>
+        <div class="cancelButton">
+            Cancel
+        </div>
+    </div>
+
+    <div class="nomeet hide">
+        <div class="noOfPart">
+            Nah, you're tying to do something that isn't even started.
+        </div>
+    </div>
+    
+    <div class="lonemeet hide">
+        <div class="noOfPart">
+            Nah, you're trying to execute this on only one participant.
+        </div>
+    </div>
+
+    <div class="wrongmeet hide">
+        <div class="noOfPart">
+            Nah, you can't use shit on random website.
+        </div>
+    </div>
+
+    <div class="social">
+        <a href="https://www.facebook.com/quotiloquent"><i class="fab fa-facebook dm-light"></i></a>
+    </div>
+
+    <script src="scripts/popup.js"></script>
+</body>
+
+</html>

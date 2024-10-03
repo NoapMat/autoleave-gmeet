@@ -1,0 +1,22 @@
+{
+    "name": "G-Leave",
+    "version": "1.0",
+    "description": "Let people leave gmeet when the class ended.",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon_kita.png"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "icons": {
+        "16": "icon_kita.png",
+        "48": "icon_kita.png", 
+        "128": "icon_kita.png"
+    }
+}
