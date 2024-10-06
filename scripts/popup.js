@@ -2,7 +2,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const tab = tabs[0];
     chrome.scripting.executeScript({
         target: { tabId: tab.id },
-        files: ['checkmeet.js']
+        files: ['scripts/checkmeet.js']
     });
     chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         if (request.meet) {
@@ -35,7 +35,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
                     });
                     chrome.scripting.executeScript({
                         target: { tabId: tab.id },
-                        files: ["exitMeet.js"]
+                        files: ["sctipts/exitMeet.js"]
                     });
                 });
             }
